@@ -12,16 +12,15 @@ The dataset for this exercise is a few MB big, so it is not uploaded to this rep
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 The following steps must be taken to run the R script:
-1. Download the dataset zip file and unzip it into the top folder of this repository, i.e. same folder as where run\_analysis resides.
-2. The name of the unzipped folder should be "UCI HAR Dataset.zip". *Rename* it to "dataset", partly because it is easier to type out, and partly because I hate spaces in directory names (if you use Linux, you'll understand why!)
-3. If you are running the script from command line, just type "Rscript run\_analysis.R" into the terminal. If RStudio, source the script when in the right folder.
+1.Download the dataset zip file and unzip it into the top folder of this repository, i.e. same folder as where run\_analysis resides.
+2.The name of the unzipped folder should be "UCI HAR Dataset.zip". **Rename** it to "dataset", partly because it is easier to type out, and partly because I hate spaces in directory names (if you use Linux, you'll understand why!)
+3.If you are running the script from command line, just type "Rscript run\_analysis.R" into the terminal. If RStudio, source the script when in the right folder.
 
-*NOTE*: I use dplyr package, please have that installed if you don't have it.
+**NOTE**: I use dplyr package, please have that installed if you don't have it.
 
 
 -----------------------------------------------------------------------------
 Below is the project description, as on the Coursera course page:
------------------------------------------------------------------------------
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations
 or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
