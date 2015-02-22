@@ -13,11 +13,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The following steps must be taken to run the R script:
 
-1.Download the dataset zip file and unzip it into the top folder of this repository, i.e. same folder as where run\_analysis resides.
+1. Download the dataset zip file and unzip it into the top folder of this repository, i.e. same folder as where run\_analysis resides.
 
-2.The name of the unzipped folder should be "UCI HAR Dataset.zip". **Rename** it to "dataset", partly because it is easier to type out, and partly because I hate spaces in directory names (if you use Linux, you'll understand why!)
+2. The name of the unzipped folder should be "UCI HAR Dataset.zip". **Rename** it to "dataset", partly because it is easier to type out, and partly because I hate spaces in directory names (if you use Linux, you'll understand why!)
 
-3.If you are running the script from command line, just type "Rscript run\_analysis.R" into the terminal. If RStudio, source the script when in the right folder.
+3. If you are running the script from command line, just type "Rscript run\_analysis.R" into the terminal. If RStudio, source the script when in the right folder.
 
 **NOTE**: I use dplyr package, please have that installed if you don't have it.
 
@@ -38,9 +38,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
  You should create one R script called run\_analysis.R that does the following. 
 1. Merges the training and the test sets to create one data set.
+
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+
 3. Uses descriptive activity names to name the activities in the data set
+
 4. Appropriately labels the data set with descriptive variable names. 
+
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
 
  Good luck!
