@@ -12,8 +12,11 @@ The dataset for this exercise is a few MB big, so it is not uploaded to this rep
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 The following steps must be taken to run the R script:
+
 1.Download the dataset zip file and unzip it into the top folder of this repository, i.e. same folder as where run\_analysis resides.
+
 2.The name of the unzipped folder should be "UCI HAR Dataset.zip". **Rename** it to "dataset", partly because it is easier to type out, and partly because I hate spaces in directory names (if you use Linux, you'll understand why!)
+
 3.If you are running the script from command line, just type "Rscript run\_analysis.R" into the terminal. If RStudio, source the script when in the right folder.
 
 **NOTE**: I use dplyr package, please have that installed if you don't have it.
