@@ -79,3 +79,26 @@ The data for this exercise is from the "Human Activity Recognition Using Smartph
 > - Features are normalized and bounded within [-1,1].
 > - Each feature vector is a row on the text file.
 
+## Transformations
+
+These are the transformations I have made, in sequence, in order to meet the Course Project requirements. They can be somewhat read as textual pseudo code for the run\_analysis.R R-script.
+
+1. Read in Volunteer IDs for each data row for both test and train data sets.
+2. Read in Activity IDs for each data row for both test and train data sets.
+3. Read in the measurements of each data row (561 measurements in each row, i.e. for each Volunteer X doing an Activity Y) for both test and train data sets.
+4. Truncate the measurement tables for test/train data sets separately to only keep values we are interested in for this exercise -- i.e. mean and standard deviation. There are columns that tabulate the measurements on the "meanFreq()" -- mean frequency -- which we exclude from this dataset. These can be easily re-included by updating the "grep" regex string. It has been excluded based on my interpretation of the requirements.
+5. Merge all data from test/train datasets into one data frame that contains all data on measurements (that we are interested in) of Volunteer X doing Activity Y. This data frame is stored as variable "df" in the script.
+6. Read in activity labels and do an inner join on all rows using the activity ID. Drop the ActivityID column as it is no longer needed, since it is "replaced" with the descriptive string instead (e.g. 1 is replaced by "WALKING" in Activity column).
+7. Format the column names of this data frame "df" to more human-readable descriptions. The following changes are made:
+	- Time domain measurements start with lowercase 't', which is replaced with "time"
+	- Frequency domain measurements start with lowercase 'f', which is replaced with "frequency"
+	- 'Acc' abbrieviation is replaced with its full form "Accelerometer", i.e. measurement from the phone's accelerometer
+	- 'Gyro' abbrieviation is replaced with its full form "Gyroscope", i.e. measurement from the phone's gyroscope
+	- 'Mag' abbrieviation is replaced with its full form "Magnitude"
+	- 'BodyBody' replaced with 'Body'
+	- 'mean' formatted to 'Mean'
+	- 'std' abbrieviation formatted to full form "StandardDeviation"
+	- '()' to signify function call removed for more pleasant formatting
+	
+For the final requirement, the formatted data frame is grouped by (VolunteerID,Activity), and for each column in the factored levels, the mean is computed. The dplyr package is used for this case to simplify the execution into a single line pipelined command, and the resulting data frame is stored in "df\_new". The new dataset is written as a table to a textual file: "volunteer\_activity\_averages.txt".
+
