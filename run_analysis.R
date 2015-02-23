@@ -39,9 +39,9 @@ x_train <- x_train[,indices]
 #Requirement 1: Merge the training and the test sets to create one data set.
 ###############################################################################################################
 #construct data frames for test and train
-df <- data.frame(volunteer_id=subjects_test, activity_id=y_test)
+df <- data.frame(VolunteerID=subjects_test, ActivityID=y_test)
 df <- cbind(df,x_test)
-df_train <- data.frame(volunteer_id=subjects_train, activity_id=y_train)
+df_train <- data.frame(VolunteerID=subjects_train, ActivityID=y_train)
 df_train <- cbind(df_train,x_train)
 #combine both test and train dataframes to meet requirement
 df <- rbind(df,df_train)
