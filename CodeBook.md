@@ -100,5 +100,7 @@ These are the transformations I have made, in sequence, in order to meet the Cou
 	- 'std' abbrieviation formatted to full form "StandardDeviation"
 	- '()' to signify function call removed for more pleasant formatting
 	
-For the final requirement, the formatted data frame is grouped by (VolunteerID,Activity), and for each column in the factored levels, the mean is computed. The dplyr package is used for this case to simplify the execution into a single line pipelined command, and the resulting data frame is stored in "df\_new". The new dataset is written as a table to a textual file: "volunteer\_activity\_averages.txt".
+For the final requirement, the formatted data frame is grouped by (VolunteerID,Activity), and for each column in the factored levels, the mean is computed. The dplyr package is used for this case to simplify the execution into a single line pipelined command, and the resulting data frame is stored in "df\_new". The new dataset is written as a table to text file "volunteer\_activity\_averages.txt".
+
+Running run\_analysis.R should output only the file "volunteer\_activity\_averages.txt" and exit without any errors. For information on running the run\_analysis.R correctly, read the README.md file in the root folder of this repository.
 
